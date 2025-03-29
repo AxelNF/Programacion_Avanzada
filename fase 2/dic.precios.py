@@ -8,4 +8,4 @@ precio = productos[prod] * cant
 try:    
     print(f'Precio total: ${precio}')
 except ValueError:
-    print('Ingresó un producto no existente')
+    print('Ingresó un producto no.. existente')
