@@ -1,2 +1,3 @@
-estudiantes = []
+from funciones import *
 
+menu()
