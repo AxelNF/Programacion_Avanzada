@@ -1,6 +1,5 @@
-estudiantes = []
-
 from clase import *
+from main import estudiantes
 
 def get_int(s):
     while True:
@@ -17,27 +16,28 @@ def menu():
         print('[2] Buscar estudiante')
         print('[3] Eliminar estudiante')
         print('[X] Salir')
-        opc = get_int('Ingrese opción')
+        opc = input('Ingrese opción')
         
-        if opc not in [1,2,3,'X']:
+        if opc not in ['1','2','3','X','x']:
             print('Ingrese una opción válida')
         else:
-            if opc == 1:
+            if opc == '1':
                 crear()
-            elif opc == 2:
+            elif opc == '2':
                 buscar()
-            elif opc == 3:
+            elif opc == '3':
                 eliminar()
             else:
                 print('Gracias...')
                 break
 
 def crear():
-    nombre = input('Ingrese nombre: ')
     matricula = get_int('Ingrese matrícula')
+    nombre = input('Ingrese nombre: ')
 
-    estudiante() = {'nombre': nombre, 'matricula': matricula}
+    estudiante(nombre, matricula)
     estudiantes.append(estudiante)
+    print('Estudiante creado')
 
 def buscar():
     pass

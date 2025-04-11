@@ -1,7 +1,7 @@
 class estudiante:
     
     nombre = ''
-    matricula = ''
+    matricula = 0
 
     def __init__(self, nombre, matricula):
         self.nombre = nombre
