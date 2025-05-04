@@ -1,10 +1,10 @@
-from clases import *
 from funciones import *
 
 estudiantes = []
+estudiantes.append(estudiante(1, 'Juan'))
+estudiantes.append(estudiante(2, 'Pedro'))
+estudiantes.append(estudiante(3, 'Maria'))
+estudiantes.append(estudiante(4, 'Jose'))
+estudiantes.append(estudiante(5, 'Ana'))
 
-estudiantes.append(estudiante('Axel', 1))
-estudiantes.append(estudiante('Pablo', 2))
-estudiantes.append(estudiante('María', 3))
-
-print(estudiantes)
+menu(estudiantes)
