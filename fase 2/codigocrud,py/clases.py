@@ -4,4 +4,5 @@ class estudiante:
         self.matricula = matricula
 
     def __str__(self):
-        return {f'Nombre: {self.nombre}\nMatrícula: {self.matricula}\n'}
+        return f'''Nombre: {self.nombre}
+Matricula: {self.matricula}'''

@@ -1,5 +1,5 @@
 from clases import *
-#from funciones import *
+from funciones import *
 
 estudiantes = []
 

@@ -13,9 +13,9 @@ def menu():
         elif opc == '1':
             crear()
         elif opc == '2':
-            pass
+            buscar()
         elif opc == '3':
-            pass
+            eliminar()
         else:
             print('Saliendo...')
             break
@@ -23,9 +23,7 @@ def menu():
 def crear(estudiantes):
     nombre = input('Ingrese nombre: ')
     matricula = int(input('Ingrese matricula: '))
-    estudiante() = (nombre, matricula)
-    estudiantes.append(estudiante)
-    print(estudiantes)
+    estudiantes
 
 def buscar():
     m = int(input('Ingrese matícula: '))
@@ -33,12 +31,6 @@ def buscar():
         if e.matricula == m:
             print(e)
             break
-
-
-        
-
-        
-
 
 def eliminar():
     pass
