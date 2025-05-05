@@ -43,8 +43,14 @@ while True:
     salario = get_salario()
     empleados.append(empleado(nombre, ap, am, rfc, salario))
 
-    opc = input('¿Desea agregar otro empleado? (s/n): ')
-    if opc.lower() != 's':
+    while True:
+        opc = input('¿Desea agregar otro empleado? (s/n): ')
+        if opc.lower() not in ['s', 'n']:
+            print('Opción no válida')
+        else:
+            break
+    
+    if opc.lower() == 'n':
         break
     
 

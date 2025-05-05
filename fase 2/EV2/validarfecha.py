@@ -37,8 +37,14 @@ while True:
     fecha_nac = get_date()
     estudiantes.append(estudiante(matricula, nombre, ap, am, fecha_nac))
     
-    opc = input('¿Desea agregar otro estudiante? (s/n): ')
-    if opc.lower() != 's':
+    while True:
+        opc = input('¿Desea agregar otro estudiante? (s/n): ')
+        if opc.lower() not in ['s', 'n']:
+            print('Opción no válida')
+        else:
+            break
+    
+    if opc.lower() == 'n':
         break
 
 for e in estudiantes:
