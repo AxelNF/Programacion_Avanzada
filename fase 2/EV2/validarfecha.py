@@ -1,4 +1,5 @@
 from datetime import *
+import os
 
 
 class estudiante():
@@ -29,6 +30,10 @@ def get_date():
 
 estudiantes = []
 
+estudiantes.append(estudiante('1', 'Luis', 'Martinez', 'Montemayor', '10/10/2010'))
+estudiantes.append(estudiante('2', 'Julieta', 'Gonzalez', 'Sanchez', '15/07/2008'))
+estudiantes.append(estudiante('3', 'Martín', 'Gutierrez', 'Chapa', '23/12/2011'))
+
 while True:
     matricula = input('Ingrese matricula: ')
     nombre = input('Ingrese nombre: ')
@@ -47,5 +52,23 @@ while True:
     if opc.lower() == 'n':
         break
 
+ruta = os.path.abspath(os.getcwd())
+archivo_trabajo=ruta+"\\estudiantes.csv"
+archivo_respaldo=ruta+"\\contactos.bak"
+
+if os.path.exists(archivo_trabajo):
+    if os.path.exists(archivo_respaldo):
+        os.remove(archivo_respaldo)
+
+        os.rename(archivo_trabajo,archivo_respaldo)
+
+f = open(archivo_trabajo,"w+")
+f.write("Matricula|Nombre|APP|APM|Fecha de nacimiento\n")
+
 for e in estudiantes:
-    print(e)
+    f.write(f'{e.matricula}|{e.nombre}|{e.ap}|{e.am}|{e.fecha_nac}\n')
+
+f.close()
+
+#for e in estudiantes:
+#    print(e)
