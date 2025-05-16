@@ -34,6 +34,7 @@ estudiantes.append(estudiante('1', 'Luis', 'Martinez', 'Montemayor', '10/10/2010
 estudiantes.append(estudiante('2', 'Julieta', 'Gonzalez', 'Sanchez', '15/07/2008'))
 estudiantes.append(estudiante('3', 'Martín', 'Gutierrez', 'Chapa', '23/12/2011'))
 
+
 while True:
     matricula = input('Ingrese matricula: ')
     nombre = input('Ingrese nombre: ')
@@ -51,6 +52,7 @@ while True:
     
     if opc.lower() == 'n':
         break
+
 
 ruta = os.path.abspath(os.getcwd())
 archivo_trabajo=ruta+"\\estudiantes.csv"
