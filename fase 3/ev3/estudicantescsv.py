@@ -33,8 +33,15 @@ estudiantes = []
 estudiantes.append(estudiante('1', 'Luis', 'Martinez', 'Montemayor', '10/10/2010'))
 estudiantes.append(estudiante('2', 'Julieta', 'Gonzalez', 'Sanchez', '15/07/2008'))
 estudiantes.append(estudiante('3', 'Martín', 'Gutierrez', 'Chapa', '23/12/2011'))
+estudiantes.append(estudiante('4', 'Ana', 'Gonzalez', 'Martinez', '01/01/2000'))
+estudiantes.append(estudiante('5', 'Pedro', 'Jimenez', 'Lopez', '05/05/2005'))
+estudiantes.append(estudiante('6', 'Maria', 'Hernandez', 'Garcia', '20/02/2002'))
+estudiantes.append(estudiante('7', 'Jose', 'Ramirez', 'Torres', '30/03/2003'))
+estudiantes.append(estudiante('8', 'Laura', 'Vasquez', 'Reyes', '25/12/2004'))
+estudiantes.append(estudiante('9', 'Carlos', 'Morales', 'Cruz', '15/08/2006'))
+estudiantes.append(estudiante('10', 'Sofia', 'Reyes', 'Gonzalez', '18/11/2007'))
 
-
+'''
 while True:
     matricula = input('Ingrese matricula: ')
     nombre = input('Ingrese nombre: ')
@@ -52,11 +59,11 @@ while True:
     
     if opc.lower() == 'n':
         break
-
+'''
 
 ruta = os.path.abspath(os.getcwd())
-archivo_trabajo=ruta+"\\estudiantes.csv"
-archivo_respaldo=ruta+"\\contactos.bak"
+archivo_trabajo = os.path.join(ruta, "estudiantes.csv")
+archivo_respaldo = os.path.join(ruta, "estudiantes.bak")
 
 if os.path.exists(archivo_trabajo):
     if os.path.exists(archivo_respaldo):
